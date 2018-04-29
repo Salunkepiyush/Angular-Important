@@ -1,0 +1,15 @@
+<form [formGroup]="myform" (ngSubmit)="Login(myform.value)">
+    <label>
+        Login
+    </label>
+    <input type="text" formControlName="username">
+    <label>
+        Password
+    </label>
+    <input type="password" formControlName="password">
+    <button [routerLink]="['/welcome']">welcome </button>
+    <button type="submit">Submit</button>
+    <li *ngFor="let hero of formdata">
+        {{hero.first_name}}
+    </li>
+</form>
